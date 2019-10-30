@@ -8,13 +8,14 @@ constructor(props) {
   this.state = {
     sounds: [],
     selectedSound: null,
-    tempo: null
+    tempo: 1000
   }
     this.handleTempoChange = this.handleTempoChange.bind(this);
 }
 
   handleTempoChange(selectedTempo) {
-    this.setState({ tempo: selectedTempo })
+    const interval = Math.floor(60000/selectedTempo)
+    this.setState({ tempo: interval })
   }
 
   render() {
@@ -23,7 +24,7 @@ constructor(props) {
         <MetronomeControls
         onSlide={ this.handleTempoChange }
         tempo={ this.state.tempo }/>
-        <Metronome />
+        <Metronome tempo={this.state.tempo} />
       </div>
     )
   }

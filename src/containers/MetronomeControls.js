@@ -7,7 +7,7 @@ const MetronomeControls = (props) => {
   return (
     <div>
       <h1>Controls</h1>
-        <TempoSelect onSlide={props.onSlide}/>
+        <TempoSelect tempo={props.tempo} onSlide={props.onSlide}/>
         <SoundSelect />
     </div>
   )
