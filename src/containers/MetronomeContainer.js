@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Metronome from '../components/Metronome.js';
+import MetronomeControls from './MetronomeControls.js'
 
 class MetronomeContainer extends Component {
 constructor(props) {
@@ -12,7 +13,12 @@ constructor(props) {
 }
 
   render() {
-    return <Metronome />
+    return (
+      <div className="metronome-controls">
+        <MetronomeControls />
+        <Metronome />
+      </div>
+    )
   }
 }
 
