@@ -3,11 +3,12 @@ import TempoSelect from '../components/TempoSelect.js'
 import SoundSelect from '../components/SoundSelect.js'
 
 const MetronomeControls = (props) => {
+
   return (
     <div>
-      <h1>MetronomeControls</h1>
-      <TempoSelect />
-      <SoundSelect />
+      <h1>Controls</h1>
+        <TempoSelect onSlide={props.onSlide}/>
+        <SoundSelect />
     </div>
   )
 }
